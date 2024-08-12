@@ -100,15 +100,11 @@ export const projectExperience = [
     descriptions: [
       {
         id: 1,
-        desc: "Collaborate with team to design, build, and implement advanced Content Management Systems (CMS) that are specialized to the needs of our clients and prioritizing performance",
+        desc: "Developed a content management system to manage content on the website.",
       },
       {
         id: 2,
         desc: "Transform Figma design prototypes into high-quality, responsive, interactive web applications. Ensure that designs are accurately and efficiently transformed into code, while retaining visual consistency and usability.",
-      },
-      {
-        id: 3,
-        desc: "Use my knowledge of front-end and back-end technologies to create web applications. Implement and integrate APIs, manage databases, and guarantee that data flows and user interactions are seamless.",
       },
 
     ],
@@ -116,8 +112,8 @@ export const projectExperience = [
     techs: [
       { id: 1, name: "Laravel", icon: "",},
       { id: 2, name: "Tailwind", icon: "/tail.svg"},
-      { id: 3, name: "Typescript", icon: "/ts.svg"},
-      { id: 4, name: "CSS", icon: "/css.svg"},
+      { id: 3, name: "React.ts", icon: ""},
+      { id: 4, name: "Inertia.js", icon: ""},
       { id: 5, name: "PHP", icon: ""},
       { id: 6, name: "MySQL", icon: "/mysql.png"},
     ],
@@ -130,18 +126,18 @@ export const projectExperience = [
     descriptions: [
       {
         id: 1,
-        desc: "Use HTML, CSS, Tailwind, and Typescript to transform home page design prototypes created with tools such as Figma into responsive, dynamic web pages.",
+        desc: "Use HTML, CSS, Tailwind, and React.ts to transform home page design prototypes created with tools such as Figma into responsive, dynamic web pages.",
       },
       {
         id: 2,
-        desc: "Collaborate with designers and project managers to understand needs and provide high-quality front-end solutions.",
+        desc: "Responsible for converting Figma designs into high-quality code while also assisting team members in overcoming challenges to ensure smooth project delivery.",
       },
     ],
     position: "Front-end Developer",
     techs: [
       { id: 1, name: "NextJs", icon: "/next.svg",},
       { id: 2, name: "Tailwind", icon: "/tail.svg",},
-      { id: 3, name: "Typescript", icon: "/ts.svg",},
+      { id: 3, name: "React.ts", icon: "",},
       { id: 4, name: "CSS", icon: "/css.svg",},
     ],
     url: "https://designbymelz.renara.biz.id/",
@@ -153,11 +149,11 @@ export const projectExperience = [
     descriptions: [
       {
         id: 1,
-        desc: "Transform Figma design prototypes into high-quality, responsive, interactive web applications. Ensure that designs are accurately and efficiently transformed into code, while retaining visual consistency and usability.",
+        desc: "Converted Figma designs into code and optimized the layout for responsiveness, ensuring a seamless user experience across devices.",
       },
       {
         id: 2,
-        desc: "Collaborate with project managers to define requirements, establish milestones, and deliver high-quality solutions on schedule.",
+        desc: "Developed a fullstack website with content management system to manage content and items on the website.",
       },
     ],
     position: "Front-end Developer",

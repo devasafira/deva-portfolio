@@ -61,7 +61,7 @@ export const BentoGridItem = ({
   };
 
   const handleDownload = () => {
-    const text = "/CV_DevaSafira_(2).pdf";
+    const text = "/CV_DevaSafira.pdf";
     window.open(text, '_blank');
     setCopied(true);
   };
@@ -171,10 +171,10 @@ export const BentoGridItem = ({
 
           {/* Spotify Playlist bg-[#184060]*/}
           {id === 2 && (
-            <div className="flex flex-shrink-0 justify-center mt-[-0.5rem] items-center w-full h-full bg-[#184060] m-auto">
+            <div className="flex flex-shrink-0 justify-center mt-0 md:mt-[-0.5rem] items-center w-full h-full bg-[#184060] m-auto">
               <div className="bg-[#184060] absolute w-full h-[300px]"></div>
               <iframe 
-                className="absolute  rounded-[14px] bg-[#184060]"
+                className="absolute rounded-[14px] bg-[#184060] max-md:top-1"
                 src="https://open.spotify.com/embed/playlist/1CJQc815jHKBR6U9e55gV7?utm_source=generator" 
                 height="152"
                 width="100%"
