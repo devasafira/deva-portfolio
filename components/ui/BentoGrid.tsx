@@ -61,12 +61,12 @@ export const BentoGridItem = ({
   };
 
   const handleDownload = () => {
-    const text = "/CV_Deva_Safira.pdf";
+    const text = "/CV_DevaSafira_(2).pdf";
     window.open(text, '_blank');
     setCopied(true);
   };
 
-  const paddingClass = id === 3 ? 'p-0 lg:px-10' : 'p-5 lg:p-10';
+  const paddingClass = id === 3 ? 'px-4 lg:px-10' : 'p-5 lg:p-10';
 
   return (
     <div
@@ -121,7 +121,7 @@ export const BentoGridItem = ({
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
           {/* remove mb-2 mt-2 */}
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 mb-2`}
           >
             {title}
           </div>
@@ -130,7 +130,7 @@ export const BentoGridItem = ({
           {id === 1 && (
             <div className="flex gap-1 lg:gap-4 w-auto absolute right-2">
               {/* tech stack lists */}
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-3 relative top-20">
+              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:top-20 top-5">
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
@@ -142,7 +142,7 @@ export const BentoGridItem = ({
                 ))}
                 <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-3 relative bottom-5">
+              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:bottom-5">
                 <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
                 {middleLists.map((item, i) => (
                   <span
@@ -154,7 +154,7 @@ export const BentoGridItem = ({
                   </span>
                 ))}
               </div>
-              <div className="flex flex-col gap-3 md:gap-3 lg:gap-3 relative bottom-20">
+              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:bottom-20">
                 <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
                 {rightLists.map((item, i) => (
                   <span
@@ -171,10 +171,10 @@ export const BentoGridItem = ({
 
           {/* Spotify Playlist bg-[#184060]*/}
           {id === 2 && (
-            <div className="flex flex-shrink-0 justify-center items-center w-full h-full bg-[#184060]">
-              <div className="bg-[#184060] absolute w-full h-full"></div>
+            <div className="flex flex-shrink-0 justify-center mt-[-0.5rem] items-center w-full h-full bg-[#184060] m-auto">
+              <div className="bg-[#184060] absolute w-full h-[300px]"></div>
               <iframe 
-                className="absolute top-8 rounded-[14px] bg-[#184060]"
+                className="absolute  rounded-[14px] bg-[#184060]"
                 src="https://open.spotify.com/embed/playlist/1CJQc815jHKBR6U9e55gV7?utm_source=generator" 
                 height="152"
                 width="100%"
@@ -186,11 +186,11 @@ export const BentoGridItem = ({
           )}
 
           {id === 3 && (
-            <div className="w-full flex flex-row gap-5 justify-end p-0">
+            <div className="w-full flex flex-row gap-3 lg:gap-5 justify-end">
               {socialMedia.map((item, i) => (
                 <div className="" key={id}>
                   <MagicButton
-                    icon={<img src={item.icon} width={25} height={25} className="" />}
+                    icon={<img src={item.icon} width={25} height={25} alt={item.title} className="" />}
                     position="middle"
                     handleClick={() => window.open(item.url, '_blank')}
                   />

@@ -35,7 +35,7 @@ const Hero = () => {
             <TypewriterComponent strings={[ 'Computer Science Student', 'Frontend Developer']} autostart={true} loop={true} />
           </div>
 
-          <a href="#about">
+          <a href="#projects">
             <MagicButton
               title="Show my work"
               otherClasses="w-full px-12"

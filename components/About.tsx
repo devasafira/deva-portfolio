@@ -6,7 +6,7 @@ import { gridItems } from "@/data";
 const About = () => {
   return (
     <section id="about" className="">
-      <div className="py-5 md:mb-[8rem] px-20 w-screen relative z-20">
+      <div className="py-5 md:mb-[8rem] md:px-20 px-2 w-screen relative z-20">
         <TextGenerateEffect
           words="About Me"
           className="text-4xl font-semibold "

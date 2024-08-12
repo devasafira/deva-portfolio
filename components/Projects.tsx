@@ -10,20 +10,20 @@ const Projects = () => {
   const project = projectExperience[0];
 
   return (
-    <div id="projects" className="py-5 px-20">
+    <div id="projects" className="py-5 px-2 md:px-20">
       <TextGenerateEffect
         words="Projects"
-        className="text-4xl font-semibold "
+        className="text-4xl font-semibold"
       />
 
-      <div className="flex w-full gap-3 justify-around">
+      <div className="flex flex-col md:flex-row w-full gap-3 justify-around">
         {projectExperience.map((item, i) => (
-          <div className="w-[30vw] h-auto" key={item.id}>
+          <div className="w-auto lg:w-[30vw] h-auto" key={item.id}>
             <BackgroundGradient className="flex flex-col px-[0.05rem] pt-[0.05rem] pb-2">
               <img
                 src={item.image}
                 alt={item.title}
-                className="rounded-[17px] w-[40vw] h-auto"
+                className="rounded-[17px] w-auto lg:w-[40vw] h-auto"
               />
               <a
                 href={item.url}
