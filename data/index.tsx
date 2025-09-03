@@ -6,19 +6,19 @@ import gmail from '@/public/gmail.svg'
 export const gridItems = [
   {
     id: 1,
-    title: "My Tech Stack",
-    description: "I constantly try to improve",
+    title: "",
+    description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-3 lg:min-h-[40vh]",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
+    titleClassName: "justify-start",
     img: "",
     spareImg: "",
   },
   {
     id: 2,
-    title: "",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    title: "My Tech Stack",
+    description: "I constantly try to improve",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-3 lg:min-h-[30vh] px-5 py-5",
     imgClassName: "w-full h-full",
     titleClassName: "justify-start",
     img: "",
@@ -28,7 +28,7 @@ export const gridItems = [
     id: 3,
     title: "My Social Media ",
     description: "Get in touch with me by",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 px-4 py-5",
     imgClassName: "",
     titleClassName: "justify-center",
     img: "",
@@ -36,34 +36,15 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "",
     description: "",
-    className: "lg:col-span-3 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-2 px-4 py-5",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-  {
-    id: 5,
-    title: "Currently Learning New Programming Language & Updating My Porto",
-    description: "The inside scoop",
-    className: "md:col-span-3 md:row-span-1",
-    imgClassName: "absolute right-0 top-5 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
+  
 ]
 
 export const socialMedia = [
@@ -91,6 +72,45 @@ export const socialMedia = [
     url: "https://github.com/devasafira",
     icon: "/github.svg",
   },
+]
+
+export const techList = [
+  {
+    id: 1,
+    title: "Power BI",
+    icon: "/powerbi.svg",
+  },
+  {
+    id: 2,
+    title: "Excel",
+    icon: "/excel.svg",
+  },
+  {
+    id: 3,
+    title: "SQL",
+    icon: "/sql.svg",
+  },
+  {
+    id: 4,
+    title: "Powerpoint",
+    icon: "/powerpoint.svg",
+  },
+  {
+    id: 5,
+    title: "Spreadsheet",
+    icon: "/spreadsheet.svg",
+  },
+  {
+    id: 6,
+    title: "Word",
+    icon: "/word.svg",
+  },
+  {
+    id: 7,
+    title: "Google Document",
+    icon: "/gdocs.svg",
+  },
+
 ]
 
 export const projectExperience = [
@@ -169,4 +189,43 @@ export const projectExperience = [
     url: "https://kemahbethshalom.renara.biz.id/",
     image: "/kemah-beth-shalom.png",
   },
+]
+
+export const projectDatas = [
+  {
+    id: 1,
+    image: "/pizza-sales.png",
+    title: "Pizza Sales",
+    slug:"pizza-sales",
+    descs: [
+      {
+        id: 1,
+        desc: "project ini merupakan project pizza sales",
+      },
+      {
+        id: 2,
+        desc: "data dari project ini diambil dari kaggle",
+      },
+    ],
+    url: "https://app.powerbi.com/view?r=eyJrIjoiM2RjZjhiOTctNzBkOS00NGI2LWI4MzgtNTczZWNlODc3NjllIiwidCI6ImFlYjNjOWY2LTQ3MWMtNDEyZS05Mzg1LTIyMmU5ZGQxYjQ1OCJ9",
+    pdf: "/pizzasalespdf.pdf",
+  },
+  // {
+  //   id: 2,
+  //   image: "",
+  //   title: "Customer Complaint [on proccess]",
+  //   slug:"customer-complaint",
+  //   descs: [
+  //     {
+  //       id: 1,
+  //       desc: "",
+  //     },
+  //     {
+  //       id: 2,
+  //       desc: "",
+  //     },
+  //   ],
+  //   url: "",
+  //   pdf: "",
+  // },
 ]

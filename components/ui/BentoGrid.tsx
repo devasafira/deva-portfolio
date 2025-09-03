@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { cn } from "@/utils/cn";
 import MagicButton from "../ui/MagicButton";
-import { socialMedia } from "@/data";
+import { socialMedia, techList } from "@/data";
 
 export const BentoGrid = ({
   className,
@@ -46,7 +46,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["Typescript", "ReactJS", "NextJS", "Bootstrap"];
+  const leftLists = ["Power BI", "ReactJS", "NextJS", "Bootstrap"];
   const middleLists = ["Codeigniter", "Laravel", "CSS3", "HTML5",]
   const rightLists = ["Typescript", "NuxtJS", "Tailwind", "Javascript"];
 
@@ -66,7 +66,7 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
-  const paddingClass = id === 3 ? 'px-4 lg:px-10' : 'p-5 lg:p-10';
+  // const paddingClass = id === 3 ? 'px-4 lg:px-10' : 'p-5 lg:p-10';
 
   return (
     <div
@@ -94,28 +94,15 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
-        >
-          {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              //   width={220}
-              className="object-cover object-center w-full h-full"
-            />
-          )}
-        </div>
 
         <div
           className={cn(
             titleClassName,
-            "relative md:h-full min-h-40 flex flex-col", paddingClass
+            "relative md:h-full min-h-40 flex flex-col", //paddingClass
           )} // p-5 lg:p-10
         >
           {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:max-w-34 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
           {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
@@ -126,62 +113,38 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {/* Tech stack list div */}
-          {id === 1 && (
-            <div className="flex gap-1 lg:gap-4 w-auto absolute right-2">
-              {/* tech stack lists */}
-              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:top-20 top-5">
-                {leftLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-3 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-[0.5rem] text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
-              </div>
-              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:bottom-5">
-                <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
-                {middleLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-3 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-[0.5rem] text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col gap-1 md:gap-3 lg:gap-3 relative md:bottom-20">
-                <span className="lg:py-3 lg:px-3 py-2 px-3 rounded-[0.5rem] text-center bg-[#10132E]"></span>
-                {rightLists.map((item, i) => (
-                  <span
-                    key={i}
-                    className="lg:py-3 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-[0.5rem] text-center bg-[#10132E]"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+          {/* call to action / cv */}
+          {id === 4 && (
+            <div className="flex items-center justify-center flex-col gap-1 lg:gap-2 w-auto ">
+              <div className="flex font-sans font-extralight text-lg lg:text-xl">Open to opportunities in Data Analytics.</div>
+              <div className="flex font-sans font-bold text-lg lg:text-2xl lg:mb-[-20px]">Download My CV</div>
+              <MagicButton
+                title={copied ? "CV has been downloaded!" : "Download my CV"}
+                position="middle"
+                handleClick={handleDownload}
+                otherClasses="!bg-[#161A31]"
+              />
             </div>
           )}
 
-          {/* Spotify Playlist bg-[#184060]*/}
+          {/* Tech stack list div */}
           {id === 2 && (
-            <div className="flex flex-shrink-0 justify-center mt-0 md:mt-[-0.5rem] items-center w-full h-full bg-[#184060] m-auto">
-              <div className="bg-[#184060] absolute w-full h-[300px]"></div>
-              <iframe 
-                className="absolute rounded-[14px] bg-[#184060] max-md:top-1"
-                src="https://open.spotify.com/embed/playlist/1CJQc815jHKBR6U9e55gV7?utm_source=generator" 
-                height="152"
-                width="100%"
-                frameBorder="0" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">                
-              </iframe>
+            <div className="flex gap-1 lg:gap-4 w-auto absolute right-2 mt-[2rem]">
+              {/* tech stack lists */}
+              <div className="flex flex-wrap justify-center flex-row gap-1 md:gap-3 lg:gap-3 relative md:top-20 top-5">
+                {techList.map((item, i) => (
+                  <span
+                    key={i}
+                    className="flex items-center lg:py-3 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-[0.5rem] text-center bg-[#10132E]"
+                  >
+                    {item.icon && (
+                      <img src={item.icon} alt={item.title} width={40} height={40}/>
+                    )}
+                    {item.title}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
 
@@ -190,7 +153,7 @@ export const BentoGridItem = ({
               {socialMedia.map((item, i) => (
                 <div className="" key={id}>
                   <MagicButton
-                    icon={<img src={item.icon} width={25} height={25} alt={item.title} className="" />}
+                    icon={ item.icon ? (<img src={item.icon} width={25} height={25} alt={item.title} className="" />) : (<span>{item.title}</span>)}
                     position="middle"
                     handleClick={() => window.open(item.url, '_blank')}
                   />
@@ -199,26 +162,18 @@ export const BentoGridItem = ({
             </div>
           )}
 
-          {id === 6 && (
-            <div className="mt-5 relative">
-              {/* button border magic from tailwind css buttons  */}
-              {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-              {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-              {/* add handleCopy() for the copy the text */}
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
-              >
-                
+          {id === 1 && (
+            <div className="w-full h-auto flex md:flex-row flex-col md:justify-center md:gap-5 gap-5 md:text-base text-sm md:py-1 md:pb-3 pb-5 pt-2 px-5 ">
+              <div className="w-auto md:h-auto flex md:justify-center text-justify items-center">
+                I’m Deva Safira, a Computer Science graduate with hands-on experience as a Data Analyst Intern at 
+                PT The Univenus Serang. I built dynamic dashboards that cut reporting time 
+                and prepared accurate weekly and monthly reports. Passionate about transforming raw data into actionable 
+                insights, I’m now open to entry-level opportunities in data analytics.
               </div>
 
-              <MagicButton
-                title={copied ? "CV has been downloaded!" : "Download my CV"}
-                // icon={}
-                position="left"
-                handleClick={handleDownload}
-                otherClasses="!bg-[#161A31]"
-              />
+              <div className="lg:h-auto md:h-auto flex lg:items-center ">
+                <img src="/univenusPict.jpg" className="rounded-[10px]" alt="Documentation Intern in PT The Univenus" />
+              </div>
             </div>
           )}
         </div>

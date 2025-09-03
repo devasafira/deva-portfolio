@@ -32,7 +32,7 @@ const Hero = () => {
 
           <div className="flex flex-row gap-2 text-center md:tracking-wider mb-2 mt-2 mr-2 text-sm md:text-lg lg:text-2xl animate-in fade-in fill-mode-backwards duration-700 delay-1000">
             <p>I&apos;m a</p>
-            <TypewriterComponent strings={[ 'Computer Science Student', 'Frontend Developer']} autostart={true} loop={true} />
+            <TypewriterComponent strings={['Data Analytics', 'Data Enthusiast']} autostart={true} loop={true} />
           </div>
 
           <a href="#projects">

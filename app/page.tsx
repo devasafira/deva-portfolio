@@ -4,7 +4,7 @@
 import React, { Suspense } from "react";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
+import Projects from "@/components/ProjectData";
 
 const Page = () => {
   return (
